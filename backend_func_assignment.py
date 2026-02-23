@@ -23,14 +23,14 @@ print(
 #    {"status": code, "message": message}
 
 def response(message, code):
-    return {"status": code, "message": message}
+    return {"message": message, "status": code}
 
 print(
-    response(400, "unsuccessful")
+    response("unsuccessful", 400)
 )
 
 print(
-    type(response(200, "successful"))
+    type(response("successful", 200))
 )
 
 
@@ -54,12 +54,12 @@ print(
 #    Else return False.
 
 def is_valid_email(email):
-    # if "@" in email and "." in email:
+    # if ("@" in email) and ("." in email) :
     #     return True
     # else:
     #     return False
 
-    return True if "@" and "." in email else False
+    return True if ("@" in email) and ("." in email) else False
 
 print(
     is_valid_email(input("Enter your email: "))
@@ -126,9 +126,9 @@ print(add_product(products, "benz", 90000000))
 #    - Else return "No Access"
 
 def check_permission(role):
-   if role == "Admin":
+   if role == "admin":
        return "Full Access"
-   elif role == "User":
+   elif role == "user":
         return "Limited Access"
    else:
        return "No Access"
