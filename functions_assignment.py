@@ -126,8 +126,8 @@ print(
     create_account(
         first_name=  "Andi",
         last_name= "Udom",
-        age= "19",
-        is_active=  "True"
+        age= 19,
+        is_active=  True
     )
 )
 
