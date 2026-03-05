@@ -1,3 +1,5 @@
+# A candidate filtering program
+
 class Election:
     def __init__(self, name, age, position, party):
         self.name = name 
@@ -26,13 +28,13 @@ class Candidate:
         self.list_of_candidates.append(election_candidates)
 
 
-        print(f"{"~~" * 32}\n{name} added to Candidate list.\n{"~~" * 32}")
+        print(f'{"~~" * 32}\n{name} added to Candidate list.\n{"~~" * 32}')
     
 
     def view_candidates(self):
         # if not self.list_of_candidates:
         if len(self.list_of_candidates) == 0:
-            print(f"{"~~" * 32}\nThere are no Candidate.\n{"~~" * 32}")
+            print(f'{"~~" * 32}\nThere are no Candidate.\n{"~~" * 32}')
             return
         
         print(
@@ -40,7 +42,7 @@ class Candidate:
         )
 
         for index, election_candidates in enumerate (self.list_of_candidates):
-            print(f"{index + 1}. Name:{election_candidates.name}, Age: {election_candidates.age}years, Position: Aspiring {election_candidates.position}, Party: {election_candidates.party}")
+            print(f'{index + 1}. Name:{election_candidates.name}, Age: {election_candidates.age}years, Position: Aspiring {election_candidates.position}, Party: {election_candidates.party}')
 
         print(
             "~~" * 44
@@ -49,7 +51,7 @@ class Candidate:
 
     def disqualify_candidates(self):
         if len(self.list_of_candidates) == 0:
-            print(f"{"~~" * 32}\nThere are no Candidate to be disqualified in the list.\n{"~~" * 32}")
+            print(f'{"~~" * 32}\nThere are no Candidate to be disqualified in the list.\n{"~~" * 32}')
             return
         
         print(
@@ -58,7 +60,7 @@ class Candidate:
 
         for candidate in self.list_of_candidates:
             if int(candidate.age) < 35:
-                print(f"{candidate.name} is not up to 50years old and is disqualified.")
+                print(f'{candidate.name} is not up to 35years old and is disqualified.')
 
 
     def run(self):
