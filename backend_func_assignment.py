@@ -54,11 +54,6 @@ print(
 #    Else return False.
 
 def is_valid_email(email):
-    # if ("@" in email) and ("." in email) :
-    #     return True
-    # else:
-    #     return False
-
     return True if ("@" in email) and ("." in email) else False
 
 print(
